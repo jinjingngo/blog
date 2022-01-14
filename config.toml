@@ -1,0 +1,64 @@
+baseURL = 'https://charleserious.github.io/'
+title = 'Jinjing Wu'
+theme = 'hugo-coder'
+languageCode = 'en-us'
+defaultcontentlanguage = 'en-us'
+
+paginate = 20
+
+pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+disqusShortname = "yourdiscussshortname"
+
+[params]
+  author = "Jinjing Wu"
+  info = "Full Stack Engineer"
+  description = "Jinjing Wu's personal website"
+  keywords = "blog,developer,personal"
+  avatarurl = "images/avatar.png"
+  # gravatar = "wujinjing25@gmail.com"
+
+  favicon_32 = "images/favicon-40x40.png"
+  favicon_16 = "images/favicon-40x40.png"
+
+  since = 2022
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  # customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/charleserious/"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa fa-twitter fa-2x"
+  weight = 3
+  url = "https://twitter.com/charleserious/"
+
+# Menu links
+
+[[menu.main]]
+  name = "About"
+  weight = 1
+  url = "about/"
+# [[menu.main]]
+#   name = "Blog"
+#   weight = 2
+#   url  = "posts/"
