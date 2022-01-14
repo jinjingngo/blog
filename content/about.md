@@ -1,7 +1,7 @@
 ---
 title: "About Me"
 date: 2022-01-14T12:36:16+08:00
-draft: true
+draft: false
 ---
 
 Hello, I'm Jinjing Wu.
