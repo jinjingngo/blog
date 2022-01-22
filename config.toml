@@ -3,6 +3,7 @@ title = 'Jinjing Wu'
 theme = 'hugo-coder'
 languageCode = 'en-us'
 defaultcontentlanguage = 'en-us'
+googleAnalytics = 'UA-104926959-1'
 
 paginate = 20
 
