@@ -1,5 +1,4 @@
 +++ 
-draft = true
 date = 2022-12-25T22:13:54+08:00
 title = "Program Application"
 description = "Program Application is a post that belongs to a serious story about How I moved my family from China to Sweden as a Software Engineer"
