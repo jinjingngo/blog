@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   // TODO: OpenGraph metadata
 };
 
+export const runtime = "edge";
+
 export default function RootLayout({
   children,
 }: Readonly<{
