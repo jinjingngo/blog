@@ -14,6 +14,7 @@
   @apply text-base md:text-lg font-medium;
 }
 
-.header__nav_anchor:hover {
+.header__nav_anchor:hover,
+.header__nav_anchor-active {
   @apply underline text-[salmon];
 }
