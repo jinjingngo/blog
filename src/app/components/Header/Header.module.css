@@ -15,5 +15,5 @@
 }
 
 .header__nav_anchor:hover {
-  @apply underline;
+  @apply underline text-[salmon];
 }
