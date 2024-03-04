@@ -10,16 +10,15 @@ export type ResumeCardProps = {
 const ResumeCard = ({ position, url }: ResumeCardProps) => {
   return (
     <article className="max-w-72 max-h-48">
-      <Link
+      <a
         className="flex flex-col gap-8 justify-center items-center hover:text-[salmon] hover:underline"
         target="_blank"
         rel="noopener noreferrer"
         href={url}
-        locale={false}
       >
         <FaRegFilePdf size={"10rem"} />
         <h1>{position}</h1>
-      </Link>
+      </a>
     </article>
   );
 };
