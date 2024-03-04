@@ -1,5 +1,4 @@
 import classes from "./ResumeCard.module.css";
-import Link from "next/link";
 import { FaRegFilePdf } from "react-icons/fa6";
 
 export type ResumeCardProps = {
