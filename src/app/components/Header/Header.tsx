@@ -1,5 +1,7 @@
+"use client";
 import classes from "./Header.module.css";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type Route = {
   name: string;
@@ -16,6 +18,7 @@ const routes: Route[] = [
 ];
 
 const Header = () => {
+  const pathname = usePathname();
   return (
     <header className={classes.header}>
       <Link className={classes.header__title} href="/">
@@ -25,7 +28,12 @@ const Header = () => {
         <ul className={classes.header__nav_list}>
           {routes.map(({ name, path }, index) => (
             <li key={index}>
-              <Link className={classes.header__nav_anchor} href={path}>
+              <Link
+                className={`${classes.header__nav_anchor} ${
+                  pathname === path && classes["header__nav_anchor-active"]
+                }`}
+                href={path}
+              >
                 {name}
               </Link>
             </li>
