@@ -1,7 +1,13 @@
 import classes from "./Header.module.css";
 import Link from "next/link";
 
-const routes = [
+type Route = {
+  name: string;
+  path: string;
+};
+
+const routes: Route[] = [
+  { name: "Home", path: "/" },
   { name: "Projects", path: "/projects" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
