@@ -7,7 +7,7 @@
 }
 
 .header__nav_list {
-  @apply flex gap-4 md:gap-8 justify-center;
+  @apply flex gap-4 md:gap-8 justify-center flex-wrap;
 }
 
 .header__nav_anchor {
