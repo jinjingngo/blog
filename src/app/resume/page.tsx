@@ -5,11 +5,11 @@ import type { ResumeCardProps } from "../components/ResumeCard";
 const resumes: ResumeCardProps[] = [
   {
     position: "Senior Frontend Engineer",
-    url: "./resumes/Jinjing Wu_Senior Frontend Developer_CV.pdf",
+    url: "/resumes/Jinjing Wu_Senior Frontend Developer_CV.pdf",
   },
   {
     position: "Senior Full-Stack Engineer",
-    url: "./resumes/Jinjing Wu_Senior Full-Stack Developer_CV.pdf",
+    url: "/resumes/Jinjing Wu_Senior Full-Stack Developer_CV.pdf",
   },
 ];
 
