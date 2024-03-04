@@ -1,3 +1,4 @@
+"use client";
 import classes from "./ResumeCard.module.css";
 import Link from "next/link";
 import { FaRegFilePdf } from "react-icons/fa6";
