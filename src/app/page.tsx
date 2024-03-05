@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-main-h flex-col items-center justify-center gap-8 p-24 md:px-40 text-lg md:text-xl">
+    <main className="flex min-main-h flex-col items-center justify-center gap-8 p-24 landscape:p-20 md:px-40 text-lg md:text-xl">
       <h1 className="hidden md:block">Here you have Jinjing Wu</h1>
       <article className="text-center">
         If you&apos;re seeking a Senior Full Stack or Senior Frontend Developer

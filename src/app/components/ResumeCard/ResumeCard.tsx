@@ -15,7 +15,7 @@ const ResumeCard = ({ position, url }: ResumeCardProps) => {
         rel="noopener noreferrer"
         href={url}
       >
-        <FaRegFilePdf size={"10rem"} />
+        <FaRegFilePdf className="w-16 h-16 md:w-32 md:h-32" />
         <h1 className="text-center">{position}</h1>
       </a>
     </article>
