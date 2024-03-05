@@ -1,0 +1,11 @@
+.about__wrapper {
+  @apply block py-14 px-24 md:px-64 md:flex md:flex-col md:justify-center;
+}
+
+.about__paragraph {
+  @apply md:h-[fit-content]
+}
+
+.about__paragraph:not(:last-of-type) {
+  @apply pb-2;
+}
