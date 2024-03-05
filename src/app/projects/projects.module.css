@@ -1,0 +1,19 @@
+.projects {
+  @apply relative w-full h-full gap-2 md:px-48 md:py-8 flex flex-col;
+}
+
+.projects__tip {
+  @apply text-center text-lg;
+}
+
+.projects__scroll_view {
+  @apply relative w-full flex-grow flex flex-nowrap overflow-x-auto gap-9;
+}
+
+.projects__scroll_view::-webkit-scrollbar {
+  @apply hidden;
+}
+
+.projects__scroll_view article {
+  @apply flex-auto flex-grow-0 flex-shrink-0;
+}

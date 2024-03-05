@@ -15,7 +15,6 @@ const resumes: ResumeCardProps[] = [
 
 export default function Resume() {
   return (
-    // <main className="min-main-h grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 gap-4 place-items-center p-24 md:px-40 text-lg md:text-xl">
     <main className="min-main-h grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 landscape:grid-rows-1 landscape:grid-cols-2 gap-4 place-items-center p-24 md:px-40 landscape:p-20 text-lg md:text-xl">
       {resumes.map((resume, index) => (
         <ResumeCard key={index} {...resume}></ResumeCard>

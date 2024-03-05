@@ -11,7 +11,7 @@ export type ContactCardProps = {
 
 const ContactCard = ({ url, title, children }: ContactCardProps) => {
   return (
-    <Link href={url} title={title}>
+    <Link href={url} title={title} target="_target">
       {children}
     </Link>
   );
