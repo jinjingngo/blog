@@ -1,0 +1,11 @@
+.projects {
+  @apply relative w-full h-full gap-9 md:px-48 md:py-8 flex flex-nowrap overflow-x-auto;
+}
+
+.projects::-webkit-scrollbar {
+  @apply hidden;
+}
+
+.projects article {
+  @apply flex-auto flex-grow-0 flex-shrink-0;
+}

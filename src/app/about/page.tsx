@@ -2,7 +2,7 @@ import classes from "./about.module.css";
 
 export default function About() {
   return (
-    <main className={`min-main-h ${classes.about__wrapper}`}>
+    <main className={`min-main-h ${classes.about}`}>
       <p className={classes.about__paragraph}>
         Act as a Senior Developer known for problems solver. Specializing in
         React, Go, and AWS(know some of it), I&apos;ve enhanced user experiences

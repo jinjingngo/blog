@@ -1,0 +1,23 @@
+.project__card {
+  @apply grid gap-2 relative w-full rounded-lg shadow-lg hover:shadow-xl;
+}
+
+.project__poster {
+  @apply rounded-lg;
+}
+
+.project__mask {
+  @apply absolute bottom-0 px-4 py-2 bg-gradient-to-b from-transparent to-black text-white;
+}
+
+.project__name {
+  @apply font-bold;
+}
+
+.project__go {
+  @apply float-right;
+}
+
+.project__go {
+  @apply hover:text-[salmon] hover:underline;
+}
