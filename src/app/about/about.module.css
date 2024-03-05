@@ -1,5 +1,5 @@
 .about__wrapper {
-  @apply block py-14 px-24 md:px-64 md:flex md:flex-col md:justify-center;
+  @apply py-14 px-12 md:px-56 flex flex-col justify-center text-lg md:text-xl;
 }
 
 .about__paragraph {
