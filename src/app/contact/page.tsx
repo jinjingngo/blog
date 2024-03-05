@@ -12,22 +12,26 @@ const className = "w-8 h-8 md:w-12 md:h-12";
 
 const contacts: ContactCardProps[] = [
   {
-    children: <MdAlternateEmail className={className} />,
+    children: (
+      <MdAlternateEmail className={`${className} hover:text-[salmon]`} />
+    ),
     url: "mailto: jinjing.ngo@gmail.com",
     title: "Mail me",
   },
   {
-    children: <FaGithub className={className} />,
+    children: <FaGithub className={`${className} hover:text-[salmon]`} />,
     url: "https://github.com/charleserious",
     title: "GitHub Profile",
   },
   {
-    children: <AiOutlineLinkedin className={className} />,
+    children: (
+      <AiOutlineLinkedin className={`${className} hover:text-[#2a52be]`} />
+    ),
     url: "https://www.linkedin.com/in/jinjingwu/",
     title: "LinkedIn Profile",
   },
   {
-    children: <FaXTwitter className={className} />,
+    children: <FaXTwitter className={`${className} hover:text-[salmon]`} />,
     url: "https://twitter.com/JinjingNgo",
     title: "X Profile",
   },
