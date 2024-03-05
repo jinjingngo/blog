@@ -1,7 +1,27 @@
+import classes from "./about.module.css";
+
 export default function About() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1>About Jinjing Wu</h1>
+    <main className={`min-main-h ${classes.about__wrapper}`}>
+      <p className={classes.about__paragraph}>
+        Act as a Senior Developer known for problems solver. Specializing in
+        React, Go, and AWS(know some of it), I&apos;ve enhanced user experiences
+        and system functionalities in diverse projects. From scalable web
+        applications to dynamic GIS maps and interactive 3D graphics, my work
+        pushes my understanding of computation.
+      </p>
+      <p className={classes.about__paragraph}>
+        Originally from Jiangsu, China, I&apos;m currently contributing to the
+        tech scene in Stockholm, driven by a passion for technology,
+        environmental sustainability, and continuous learning. My approach
+        marries rigorous problem-solving with creativity, aiming to transcend
+        conventional web technology limits.
+      </p>
+      <p className={classes.about__paragraph}>
+        Championing agile methodologies and teamwork, I aim to create web
+        applications that are not only efficient and forward-thinking but also
+        positively impact the digital landscape.
+      </p>
     </main>
   );
 }
