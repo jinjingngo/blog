@@ -4,11 +4,11 @@ export default function About() {
   return (
     <main className={`min-main-h ${classes.about__wrapper}`}>
       <p className={classes.about__paragraph}>
-        I&apos;m Jinjing Wu, a Senior Front-End and Full-Stack Developer known
-        for problems solver. Specializing in React, Go, and AWS(know some of
-        it), I&apos;ve enhanced user experiences and system functionalities in
-        diverse projects. From scalable web applications to dynamic GIS maps and
-        interactive 3D graphics, my work pushes my understanding of computation.
+        Act as a Senior Developer known for problems solver. Specializing in
+        React, Go, and AWS(know some of it), I&apos;ve enhanced user experiences
+        and system functionalities in diverse projects. From scalable web
+        applications to dynamic GIS maps and interactive 3D graphics, my work
+        pushes my understanding of computation.
       </p>
       <p className={classes.about__paragraph}>
         Originally from Jiangsu, China, I&apos;m currently contributing to the
