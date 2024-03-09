@@ -40,6 +40,7 @@ const projects: ProjectCardProps[] = [
 
 export default function Projects() {
   return (
+    // TODO: add projects' tech stack
     <main className={`min-main-h ${classes.projects}`}>
       <p className={classes.projects__tip}>
         The images serve merely as conceptual illustrations and do not represent

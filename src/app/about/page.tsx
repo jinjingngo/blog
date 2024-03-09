@@ -2,11 +2,12 @@ import classes from "./about.module.css";
 
 export default function About() {
   return (
+    // TODO: add some graphic maybe a 3D thing
     <main className={`min-main-h ${classes.about}`}>
       <p className={classes.about__paragraph}>
-        Act as a Senior Developer known for problems solver. Specializing in
-        React, Go, and AWS(know some of it), I&apos;ve enhanced user experiences
-        and system functionalities in diverse projects. From scalable web
+        As a Senior Developer known for problem solving, I specialize in React,
+        Go, and AWS(know some of it), I&apos;ve enhanced user experiences and
+        system functionalities in diverse projects. From scalable web
         applications to dynamic GIS maps and interactive 3D graphics, my work
         pushes my understanding of computation.
       </p>

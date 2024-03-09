@@ -8,6 +8,7 @@ export default function Home() {
         If you&apos;re seeking a Senior Full Stack or Senior Frontend Developer
         with more than a decade of experience in developing scalable, engaging,
         and responsive web applications, look no further --{" "}
+        {/* make it like a link */}
         <Link className="hover:underline hover:text-[salmon]" href="/resume">
           HIRE ME!
         </Link>

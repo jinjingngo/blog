@@ -40,6 +40,7 @@ const contacts: ContactCardProps[] = [
 export default function Contact() {
   return (
     <main className="flex min-main-h flex-row flex-wrap gap-3 md:gap-4 items-center justify-center p-24">
+      {/* TODO: add a "Contact me below" header here */}
       {contacts.map((contact, index) => (
         <ContactCard key={index} {...contact} />
       ))}
