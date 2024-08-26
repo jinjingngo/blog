@@ -15,12 +15,12 @@ const contacts: ContactCardProps[] = [
     children: (
       <MdAlternateEmail className={`${className} hover:text-[salmon]`} />
     ),
-    url: "mailto: jinjing.ngo@gmail.com",
+    url: "mailto:jinjing.ngo@gmail.com",
     title: "Mail me",
   },
   {
     children: <FaGithub className={`${className} hover:text-[salmon]`} />,
-    url: "https://github.com/charleserious",
+    url: "https://github.com/jinjingngo",
     title: "GitHub Profile",
   },
   {
