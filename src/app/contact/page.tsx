@@ -1,4 +1,3 @@
-import classes from "./contact.module.css";
 import { FaGithub } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
 import { AiOutlineLinkedin } from "react-icons/ai";

@@ -1,4 +1,3 @@
-import classes from "./ContactCard.module.css";
 import { ReactNode } from "react";
 import Link from "next/link";
 
