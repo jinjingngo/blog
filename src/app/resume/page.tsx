@@ -1,4 +1,3 @@
-import classes from "./resume.module.css";
 import ResumeCard from "../components/ResumeCard";
 import type { ResumeCardProps } from "../components/ResumeCard";
 
