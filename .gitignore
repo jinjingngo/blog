@@ -36,8 +36,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# lock
-pnpm-lock.yaml
-
 # OpenNext
 .open-next
