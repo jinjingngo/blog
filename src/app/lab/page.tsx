@@ -1,0 +1,29 @@
+import fs from 'fs';
+import Link from 'next/dist/client/link';
+
+
+const snakeToUpperCamel = (str: string) => {
+    return str.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
+}
+
+
+const path = './src/app/lab';
+
+export default function TheTwoReacts() {
+    const folders = fs.readdirSync(path);
+    const experiments = folders.filter(folder => fs.statSync(`${path}/${folder}`).isDirectory());
+    
+    return (
+        <div>
+            <h1>My Lab</h1>
+            <p>Welcome to my lab! Where I experiment with things that I find interesting and challenging.</p>
+            <ul>
+                {experiments.map(experiment => (
+                    <li key={experiment}>
+                        <Link href={`/lab/${experiment}`}>{snakeToUpperCamel(experiment)}</Link>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+}
