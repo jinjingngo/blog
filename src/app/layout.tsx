@@ -28,10 +28,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={montserrat.className}>
-				<Header />
-				{children}
-			</body>
+			<body className={montserrat.className}>{children}</body>
 		</html>
 	);
 }
