@@ -4,5 +4,10 @@
 	"[json]": {
 		"editor.defaultFormatter": "biomejs.biome",
 		"editor.tabSize": 4
+	},
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
 	}
 }
