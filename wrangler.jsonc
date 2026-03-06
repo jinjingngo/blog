@@ -3,10 +3,7 @@
 	"main": ".open-next/worker.js",
 	"name": "blog",
 	"compatibility_date": "2026-02-25",
-	"compatibility_flags": [
-		"nodejs_compat",
-		"global_fetch_strictly_public"
-	],
+	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
 	"assets": {
 		"directory": ".open-next/assets",
 		"binding": "ASSETS"
@@ -25,14 +22,14 @@
 		"binding": "IMAGES"
 	},
 	"observability": {
-        "logs": {
-            "enabled": true,
-            "invocation_logs": true
-        }
+		"logs": {
+			"enabled": true,
+			"invocation_logs": true
+		}
 	},
-    "workers_dev": true,
-    "preview_urls": true,
-    "placement": {
-        "mode": "smart"
-    }
+	"workers_dev": true,
+	"preview_urls": true,
+	"placement": {
+		"mode": "smart"
+	}
 }

@@ -7,6 +7,6 @@ export default defineCloudflareConfig({
 	// For best results consider enabling R2 caching
 	// See https://opennext.js.org/cloudflare/caching for more details
 	// incrementalCache: r2IncrementalCache
-    incrementalCache: staticAssetsIncrementalCache,
-    enableCacheInterception: true,
+	incrementalCache: staticAssetsIncrementalCache,
+	enableCacheInterception: true,
 });
