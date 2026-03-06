@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import Link from "next/dist/client/link";
+import Link from "next/link";
 
 const snakeToUpperCamel = (str: string) => {
 	return str
