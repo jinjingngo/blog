@@ -13,9 +13,11 @@ export default function Home() {
 	}, ROLES_SWITCHING_INTERVAL);
 
 	return (
-		<main className="flex h-dvh flex-col items-center justify-center gap-8 ">
-			<h1 className="text-4xl md:text-5xl">Hi, This is Jinjing</h1>
-			<article className="text-center flex flex-col">
+		<main className="flex h-dvh flex-col items-center justify-center gap-8 text-gray-800">
+			<h1 className="text-4xl md:text-5xl text-gray-900">
+				Hi, This is Jinjing
+			</h1>
+			<article className="text-center flex flex-col text-gray-700">
 				<span>{role}</span>
 			</article>
 		</main>
