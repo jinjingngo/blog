@@ -1,20 +1,24 @@
-import Link from "next/link";
+"use client";
+import { useState } from "react";
+import { useInterval } from "usehooks-ts";
+
+const ROLES = ["Software Engineer", "Cyclist", "Hiking"];
+const ROLES_SWITCHING_INTERVAL = 2 * 1000; // 2 seconds
 
 export default function Home() {
+	const [role, setRole] = useState(ROLES[0]);
+
+	useInterval(() => {
+		setRole(ROLES[Math.floor(Math.random() * ROLES.length)]);
+	}, ROLES_SWITCHING_INTERVAL);
+
 	return (
-		<main className="flex min-main-h flex-col items-center justify-center gap-8 p-24 landscape:p-20 md:px-40 text-lg md:text-xl">
-			<h1 className="hidden md:block">Here you have Jinjing Wu</h1>
-			<article className="text-center">
-				If you&apos;re seeking a Senior Full Stack or Senior Frontend
-				Developer with more than a decade of experience in developing
-				scalable, engaging, and responsive web applications, look no
-				further --{" "}
-				<Link
-					className="animate-glow hover:underline text-[salmon]"
-					href="/resume"
-				>
-					HIRE ME!
-				</Link>
+		<main className="flex h-dvh flex-col items-center justify-center gap-8 text-gray-800">
+			<h1 className="text-4xl md:text-5xl text-gray-900">
+				Hi, This is Jinjing
+			</h1>
+			<article className="text-center flex flex-col text-gray-700">
+				<span>{role}</span>
 			</article>
 		</main>
 	);
