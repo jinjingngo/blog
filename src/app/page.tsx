@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useInterval } from "usehooks-ts";
 
-const ROLES = ["Software Engineer", "Cyclist", "Hiker"];
+const ROLES = ["Software Engineer", "Person on a bike", "Hiker"];
 const ROLES_SWITCHING_INTERVAL = 2 * 1000; // 2 seconds
 
 export default function Home() {
