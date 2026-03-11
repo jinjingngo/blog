@@ -9,7 +9,11 @@ export default function Home() {
 	const [role, setRole] = useState(ROLES[0]);
 
 	useInterval(() => {
-		setRole(ROLES[Math.floor(Math.random() * ROLES.length)]);
+		setRole((currentRole) => {
+			const currentIndex = ROLES.indexOf(currentRole);
+			const nextIndex = (currentIndex + 1) % ROLES.length;
+			return ROLES[nextIndex];
+		});
 	}, ROLES_SWITCHING_INTERVAL);
 
 	return (
