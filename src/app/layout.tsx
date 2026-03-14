@@ -13,8 +13,7 @@ export const metadata: Metadata = {
 		name: "Jinjing Wu",
 	},
 	description: "Jinjing Wu's portfolio",
-	keywords:
-		"Portfolio,FullStack Developer,Frontend Developer,Backend Developer",
+	keywords: "Portfolio,Software Engineer,Person on a bike,Hiker",
 	// TODO: Twitter metadata
 	// TODO: OpenGraph metadata
 };
