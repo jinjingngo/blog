@@ -1,12 +1,15 @@
 "use client";
 import { useState } from "react";
 import { useInterval } from "usehooks-ts";
+import { useClientId } from "./hooks/useClientId";
 
 const ROLES = ["Software Engineer", "Person on a bike", "Hiker"];
 const ROLES_SWITCHING_INTERVAL = 2 * 1000; // 2 seconds
 
 export default function Home() {
 	const [role, setRole] = useState(ROLES[0]);
+	const { id } = useClientId();
+	console.log({ id });
 
 	useInterval(() => {
 		setRole((currentRole) => {
