@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const snakeToUpperCamel = (str: string) => {
 	return str
-		.split("_")
+		.split("-")
 		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
 		.join(" ");
 };
