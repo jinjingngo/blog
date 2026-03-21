@@ -1,4 +1,7 @@
-import { buildPushHTTPRequest } from "@pushforge/builder";
+import {
+	buildPushHTTPRequest,
+	type PushSubscription as PushForgePushSubscription,
+} from "@pushforge/builder";
 import { NextResponse } from "next/server";
 import { t } from "try";
 import { context } from "@/app/lib/server/context";
@@ -17,11 +20,14 @@ type PushBody = {
 
 const isValidPushSubscription = (
 	subscription: StoredPushSubscription["subscription"],
-): subscription is PushSubscription => {
+) => {
+	if (!subscription || typeof subscription !== "object") {
+		return false;
+	}
 	return Boolean(
-		subscription?.endpoint &&
-			subscription?.keys?.auth &&
-			subscription?.keys?.p256dh,
+		subscription.endpoint === "string" &&
+			subscription.keys?.auth === "string" &&
+			subscription.keys?.p256dh === "string",
 	);
 };
 
@@ -107,7 +113,8 @@ export const POST = async (request: Request) => {
 	const privateJWK = JSON.parse(env.VAPID_PRIVATE_KEY ?? {});
 	const pushRequest = await buildPushHTTPRequest({
 		privateJWK,
-		subscription: stored.subscription, // TODO: fix type issue here
+		subscription:
+			stored.subscription as unknown as PushForgePushSubscription,
 		message,
 	});
 
