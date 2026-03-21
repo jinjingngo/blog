@@ -1,10 +1,10 @@
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 import {
 	buildPushHTTPRequest,
 	type PushSubscription as PushForgePushSubscription,
 } from "@pushforge/builder";
 import { NextResponse } from "next/server";
 import { t } from "try";
-import { context } from "@/app/lib/server/context";
 import {
 	deletePushSubscription,
 	getPushSubscriptionByClientId,
@@ -18,20 +18,6 @@ type PushBody = {
 	url: string;
 };
 
-const isValidPushSubscription = (
-	subscription: StoredPushSubscription["subscription"],
-) => {
-	if (!subscription || typeof subscription !== "object") {
-		return false;
-	}
-	return Boolean(
-		subscription.endpoint === "string" &&
-			subscription.keys?.auth === "string" &&
-			subscription.keys?.p256dh === "string",
-	);
-};
-
-const { env } = context;
 export const POST = async (request: Request) => {
 	const [ok, error, body] = await t(request.json<PushBody>());
 
@@ -56,6 +42,7 @@ export const POST = async (request: Request) => {
 		);
 	}
 
+	const { env } = await getCloudflareContext();
 	const stored = (await getPushSubscriptionByClientId(
 		env,
 		body.clientId,
@@ -66,16 +53,6 @@ export const POST = async (request: Request) => {
 			{
 				ok: false,
 				error: "Subscription not found.",
-			},
-			{ status: 400 },
-		);
-	}
-
-	if (!isValidPushSubscription(stored.subscription)) {
-		return NextResponse.json(
-			{
-				ok: false,
-				error: "Insufficient subscription structure.",
 			},
 			{ status: 400 },
 		);

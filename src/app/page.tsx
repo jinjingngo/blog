@@ -5,8 +5,6 @@ import { useInterval } from "usehooks-ts";
 const ROLES = ["Software Engineer", "Person on a bike", "Hiker"];
 const ROLES_SWITCHING_INTERVAL = 2 * 1000; // 2 seconds
 
-console.log({ NEXTJS_ENV: process.env.NEXTJS_ENV });
-
 export default function Home() {
 	const [role, setRole] = useState(ROLES[0]);
 
