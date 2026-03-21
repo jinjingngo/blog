@@ -11,6 +11,9 @@ importers:
       '@opennextjs/cloudflare':
         specifier: ^1.17.1
         version: 1.17.1(next@16.1.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(wrangler@4.73.0)
+      '@pushforge/builder':
+        specifier: ^2.0.1
+        version: 2.0.1
       next:
         specifier: 16.1.6
         version: 16.1.6(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -1004,6 +1007,11 @@ packages:
 
   '@poppinss/exception@1.2.3':
     resolution: {integrity: sha512-dCED+QRChTVatE9ibtoaxc+WkdzOSjYTKi/+uacHWIsfodVfpsueo3+DKpgU5Px8qXjgmXkSvhXvSCz3fnP9lw==}
+
+  '@pushforge/builder@2.0.1':
+    resolution: {integrity: sha512-bH7GU4gzUlBhmpxZOfmYJ4KQrC+CVkV1IN2fav+W7sp0tqi2HfcAHFtvISSTstyjOfz+32Rvy9bmpfLgNSOHCQ==}
+    engines: {node: '>=20.0.0'}
+    hasBin: true
 
   '@sindresorhus/is@7.2.0':
     resolution: {integrity: sha512-P1Cz1dWaFfR4IR+U13mqqiGsLFf1KbayybWwdd2vfctdV6hDpUkgCY0nKOLLTMSoRd/jJNjtbqzf13K8DCCXQw==}
@@ -3564,6 +3572,8 @@ snapshots:
       supports-color: 10.2.2
 
   '@poppinss/exception@1.2.3': {}
+
+  '@pushforge/builder@2.0.1': {}
 
   '@sindresorhus/is@7.2.0': {}
 

@@ -14,7 +14,7 @@ const generateClientId = () => {
 	return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
 };
 
-export function useClientId() {
+export const useClientId = () => {
 	const [id, setId] = useState<string | null>(null);
 	const isMounted = useIsMounted();
 
@@ -34,11 +34,11 @@ export function useClientId() {
 		}
 
 		const newId = generateClientId();
-		const [_writeOk, writeError] = t(() =>
+		const [writeOk, writeError] = t(() =>
 			localStorage.setItem(CLIENT_ID_STORAGE_KEY, newId),
 		);
 
-		if (!_writeOk || writeError) {
+		if (!writeOk || writeError) {
 			console.error("Unable to write client id", writeError);
 			return;
 		}
@@ -53,4 +53,4 @@ export function useClientId() {
 	}, [loadClientId, isMounted]);
 
 	return { id };
-}
+};
