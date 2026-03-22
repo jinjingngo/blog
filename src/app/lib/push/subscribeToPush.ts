@@ -9,11 +9,14 @@ const urlBase64ToUint8Array = (base64String: string) => {
 };
 
 export const subscribeToPush = async (clientId: string) => {
+	if (typeof window === "undefined") {
+		throw new Error("Push subscription is only available in the browser.");
+	}
 	if (!("serviceWorker" in navigator)) {
 		throw new Error("Service workers are not supported.");
 	}
 
-	if (!("PushManager" in window)) {
+	if (!("Notification" in window)) {
 		throw new Error("Push notifications are not supported.");
 	}
 
@@ -52,3 +55,20 @@ export const subscribeToPush = async (clientId: string) => {
 
 	return subscription;
 };
+
+// TODO: risky approach for updating service worker, find an alternative way
+(async () => {
+	if (typeof window === "undefined") {
+		return;
+	}
+	const registration = await navigator.serviceWorker.getRegistration();
+
+	if (!registration) {
+		return;
+	}
+
+	registration.addEventListener("updatefound", async (event) => {
+		console.log({ registration, event });
+		await registration.update();
+	});
+})();

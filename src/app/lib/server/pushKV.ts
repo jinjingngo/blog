@@ -1,3 +1,4 @@
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { t } from "try";
 
 const getClientKey = (clientId: string) => `PUSH:CLIENT:${clientId}`;
@@ -9,11 +10,9 @@ export type StoredPushSubscription = {
 	updatedAt: string;
 };
 
-export const getPushSubscriptionByClientId = async (
-	env: CloudflareEnv,
-	clientId: string,
-) => {
+export const getPushSubscriptionByClientId = async (clientId: string) => {
 	const key = getClientKey(clientId);
+	const { env } = await getCloudflareContext();
 	const raw = await env.PUSH_SUBSCRIPTIONS.get(key);
 	if (!raw) {
 		return null;
@@ -30,12 +29,12 @@ export const getPushSubscriptionByClientId = async (
 };
 
 export const putPushSubscription = async (
-	env: CloudflareEnv,
 	clientId: string,
 	subscription: PushSubscriptionJSON,
 ) => {
-	const now = new Date().toISOString();
-	const existing = await getPushSubscriptionByClientId(env, clientId);
+	const { env } = await getCloudflareContext();
+	const now = new Date().toUTCString();
+	const existing = await getPushSubscriptionByClientId(clientId);
 
 	const value: StoredPushSubscription = {
 		clientId,
@@ -51,10 +50,8 @@ export const putPushSubscription = async (
 	return value;
 };
 
-export const deletePushSubscription = async (
-	env: CloudflareEnv,
-	clientId: string,
-) => {
+export const deletePushSubscription = async (clientId: string) => {
+	const { env } = await getCloudflareContext();
 	const key = getClientKey(clientId);
 	return await env.PUSH_SUBSCRIPTIONS.delete(key);
 };

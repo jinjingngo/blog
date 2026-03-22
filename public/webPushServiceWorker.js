@@ -13,18 +13,17 @@ self.addEventListener("push", (event) => {
 	event.waitUntil(self.registration.showNotification(title, options));
 });
 
-self.addEventListener("notificationclick", ({ notification, waitUntil }) => {
-	notification.close();
+self.addEventListener("notificationclick", (event) => {
+	event.notification.close();
 
-	const url = notification.data?.url ?? "/";
+	const url = event.notification.data?.url ?? "/";
 
-	waitUntil(
+	event.waitUntil(
 		clients
 			.matchAll({ type: "window", includeUncontrolled: true })
 			.then((list) => {
 				for (const client of list) {
-					client?.navigate(url);
-					return client.close();
+					return client.navigate(url).then(() => client.focus());
 				}
 				return clients.openWindow(url);
 			}),

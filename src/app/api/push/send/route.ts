@@ -42,9 +42,7 @@ export const POST = async (request: Request) => {
 		);
 	}
 
-	const { env } = await getCloudflareContext();
 	const stored = (await getPushSubscriptionByClientId(
-		env,
 		body.clientId,
 	)) as StoredPushSubscription | null;
 
@@ -75,17 +73,11 @@ export const POST = async (request: Request) => {
 		body: inMessage,
 		url,
 	};
-
+	const { env } = await getCloudflareContext();
 	const message = {
 		adminContact: env.VAPID_SUBJECT,
 		payload,
 	};
-
-	console.log({
-		env,
-		VAPID_SUBJECT: env.VAPID_SUBJECT,
-		VAPID_PRIVATE_KEY: env.VAPID_PRIVATE_KEY,
-	});
 
 	const privateJWK = JSON.parse(env.VAPID_PRIVATE_KEY ?? {});
 	const pushRequest = await buildPushHTTPRequest({
@@ -102,8 +94,7 @@ export const POST = async (request: Request) => {
 	});
 
 	if ([404, 410].includes(response.status)) {
-		// TODO: delete dead subscription from KV
-		await deletePushSubscription(env, body.clientId);
+		await deletePushSubscription(body.clientId);
 	}
 
 	return NextResponse.json(
