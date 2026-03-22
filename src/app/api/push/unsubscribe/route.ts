@@ -1,4 +1,3 @@
-import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { NextResponse } from "next/server";
 import { t } from "try";
 import { deletePushSubscription } from "@/app/lib/server/pushKV";
@@ -29,8 +28,7 @@ export const POST = async (request: Request) => {
 		);
 	}
 
-	const { env } = await getCloudflareContext();
-	await deletePushSubscription(env, body.clientId);
+	await deletePushSubscription(body.clientId);
 
 	return NextResponse.json({ ok: true });
 };

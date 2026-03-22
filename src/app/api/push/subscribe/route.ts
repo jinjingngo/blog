@@ -1,4 +1,3 @@
-import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { NextResponse } from "next/server";
 import { t } from "try";
 import { putPushSubscription } from "@/app/lib/server/pushKV";
@@ -32,12 +31,7 @@ export const POST = async (request: Request) => {
 		);
 	}
 
-	const { env } = await getCloudflareContext();
-	const saved = await putPushSubscription(
-		env,
-		body.clientId,
-		body.subscription,
-	);
+	const saved = await putPushSubscription(body.clientId, body.subscription);
 
 	return NextResponse.json({
 		ok: true,

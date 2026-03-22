@@ -8,12 +8,13 @@ const urlBase64ToUint8Array = (base64String: string) => {
 	return Uint8Array.from([...rawData].map((char) => char.charCodeAt(0)));
 };
 
+// TODO: iOS Notification and ServiceWorker check need to be investigated further
 export const subscribeToPush = async (clientId: string) => {
-	if (!("serviceWorker" in navigator)) {
-		throw new Error("Service workers are not supported.");
+	if (typeof window === "undefined") {
+		throw new Error("Push subscription is only available in the browser.");
 	}
 
-	if (!("PushManager" in window)) {
+	if (!("Notification" in window)) {
 		throw new Error("Push notifications are not supported.");
 	}
 

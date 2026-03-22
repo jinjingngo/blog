@@ -8,7 +8,7 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 export const metadata: Metadata = {
 	title: "Jinjing Wu",
 	icons: {
-		icon: "./favicon.png",
+		icon: "/favicon.png",
 		apple: "/apple-touch-icon.png",
 	},
 	authors: {

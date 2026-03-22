@@ -7,7 +7,6 @@ export default () => {
 	const { id: clientId } = useClientId();
 
 	const handleOnChange = async (isChecked: boolean) => {
-		console.log({ isChecked });
 		if (!isChecked) {
 			return;
 		}
@@ -16,6 +15,7 @@ export default () => {
 		}
 		await subscribeToPush(clientId);
 	};
+
 	return (
 		<main className="flex h-dvh flex-col items-center justify-center gap-8 text-gray-800">
 			<article className="text-center flex flex-col text-gray-700">
