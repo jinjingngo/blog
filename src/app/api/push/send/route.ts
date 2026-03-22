@@ -97,6 +97,20 @@ export const POST = async (request: Request) => {
 		await deletePushSubscription(body.clientId);
 	}
 
+	if (!response.ok) {
+		const responseHeaders = Object.fromEntries(response.headers.entries());
+		const responseText = await response.text();
+
+		console.error("[ERROR] PUsh delivery failed ", {
+			endpoint: pushRequest.endpoint,
+			status: response.status,
+			statusText: response.statusText,
+			headers: responseHeaders,
+			body: responseText,
+			message,
+		});
+	}
+
 	return NextResponse.json(
 		{
 			ok: response.ok,
