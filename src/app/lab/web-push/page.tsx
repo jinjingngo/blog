@@ -17,13 +17,13 @@ export default () => {
 	};
 
 	return (
-		<main className="flex h-dvh flex-col items-center justify-center gap-8 text-gray-800">
+		<div className="flex min-h-full w-3/4 flex-col items-center justify-center gap-8 text-gray-800">
 			<article className="text-center flex flex-col text-gray-700">
 				<Toggle
 					label={"Enable Notification"}
 					onChange={handleOnChange}
 				/>
 			</article>
-		</main>
+		</div>
 	);
 };
