@@ -6,13 +6,14 @@ import { cn } from "@/app/lib/cn";
 export const Header = () => {
 	const pathname = usePathname();
 	const isSelf = (path: string) => path === pathname;
+
 	return (
 		<nav>
 			<ul className={"flex gap-4 items-center justify-end px-2 pb-1"}>
 				<li>
 					<Link
 						className={cn(
-							"cursor-pointer hover:underline underline-offset-1",
+							"cursor-pointer underline-offset-2 decoration-wavy hover:decoration-solid hover:underline-offset-2",
 							isSelf("/") && "underline",
 						)}
 						href={"/"}
@@ -23,7 +24,7 @@ export const Header = () => {
 				<li>
 					<Link
 						className={cn(
-							"cursor-pointer hover:underline underline-offset-1",
+							"cursor-pointer underline-offset-2 decoration-wavy hover:decoration-solid hover:underline-offset-2",
 							isSelf("/lab") && "underline",
 						)}
 						href={"/lab"}

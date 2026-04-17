@@ -30,12 +30,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`bg-gray-50 w-dvw flex-col-reverse min-h-dvh flex gap-4 ${montserrat.className}`}
+				className={`bg-gray-50 w-dvw flex-col min-h-dvh flex gap-4 ${montserrat.className}`}
 			>
-				<Header />
 				<main className="flex-1 flex text-gray-800 justify-center">
 					{children}
 				</main>
+				<Header />
 			</body>
 		</html>
 	);
