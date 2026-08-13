@@ -2,6 +2,7 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { Header } from "./components/header";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -28,8 +29,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`bg-gray-50 ${montserrat.className}`}>
-				{children}
+			<body
+				className={`bg-gray-50 w-dvw flex-col min-h-dvh flex gap-4 ${montserrat.className}`}
+			>
+				<main className="flex-1 flex text-gray-800 justify-center">
+					{children}
+				</main>
+				<Header />
 			</body>
 		</html>
 	);
