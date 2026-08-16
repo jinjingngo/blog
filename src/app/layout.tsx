@@ -38,7 +38,7 @@ export default function RootLayout({
 			<body
 				className={`flex min-h-dvh w-full max-w-full flex-col gap-4 bg-gray-50 ${montserrat.className}`}
 			>
-				<main className="flex min-w-0 flex-1 justify-center text-gray-800">
+				<main className="flex min-w-0 flex-1 justify-center pt-[env(safe-area-inset-top)] ps-[env(safe-area-inset-left)] pe-[env(safe-area-inset-right)] text-gray-800">
 					{children}
 				</main>
 				<Header />

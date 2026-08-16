@@ -8,14 +8,7 @@ export const Header = () => {
 	const isSelf = (path: string) => path === pathname;
 
 	return (
-		<nav
-			className="shrink-0"
-			style={{
-				paddingInlineStart: "max(0.5rem, env(safe-area-inset-left))",
-				paddingInlineEnd: "max(0.5rem, env(safe-area-inset-right))",
-				paddingBottom: "max(0.25rem, env(safe-area-inset-bottom))",
-			}}
-		>
+		<nav className="shrink-0 ps-[max(0.5rem,env(safe-area-inset-left))] pe-[max(0.5rem,env(safe-area-inset-right))] pb-[max(0.25rem,env(safe-area-inset-bottom))]">
 			<ul className="flex items-center justify-end gap-4">
 				<li>
 					<Link
