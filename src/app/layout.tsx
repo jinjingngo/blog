@@ -1,8 +1,8 @@
 import "./globals.css";
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
-import { Header } from "./components/header";
+import { Navbar } from "./components/navbar";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -22,6 +22,12 @@ export const metadata: Metadata = {
 	// TODO: OpenGraph metadata
 };
 
+export const viewport: Viewport = {
+	width: "device-width",
+	initialScale: 1,
+	viewportFit: "cover",
+};
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -30,12 +36,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`bg-gray-50 w-dvw flex-col min-h-dvh flex gap-4 ${montserrat.className}`}
+				className={`flex min-h-dvh w-full max-w-full flex-col gap-4 bg-gray-50 ${montserrat.className}`}
 			>
-				<main className="flex-1 flex text-gray-800 justify-center">
+				<main className="flex min-w-0 flex-1 justify-center pt-[env(safe-area-inset-top)] ps-[env(safe-area-inset-left)] pe-[env(safe-area-inset-right)] text-gray-800">
 					{children}
 				</main>
-				<Header />
+				<Navbar />
 			</body>
 		</html>
 	);
