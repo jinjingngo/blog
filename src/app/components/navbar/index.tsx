@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/app/lib/cn";
 
-export const Header = () => {
+export const Navbar = () => {
 	const pathname = usePathname();
 	const isSelf = (path: string) => path === pathname;
 

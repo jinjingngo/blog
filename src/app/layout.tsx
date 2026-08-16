@@ -2,7 +2,7 @@ import "./globals.css";
 
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
-import { Header } from "./components/header";
+import { Navbar } from "./components/navbar";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -41,7 +41,7 @@ export default function RootLayout({
 				<main className="flex min-w-0 flex-1 justify-center pt-[env(safe-area-inset-top)] ps-[env(safe-area-inset-left)] pe-[env(safe-area-inset-right)] text-gray-800">
 					{children}
 				</main>
-				<Header />
+				<Navbar />
 			</body>
 		</html>
 	);
