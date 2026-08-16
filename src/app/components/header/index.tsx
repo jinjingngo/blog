@@ -8,8 +8,15 @@ export const Header = () => {
 	const isSelf = (path: string) => path === pathname;
 
 	return (
-		<nav>
-			<ul className={"flex gap-4 items-center justify-end px-2 pb-1"}>
+		<nav
+			className="shrink-0"
+			style={{
+				paddingInlineStart: "max(0.5rem, env(safe-area-inset-left))",
+				paddingInlineEnd: "max(0.5rem, env(safe-area-inset-right))",
+				paddingBottom: "max(0.25rem, env(safe-area-inset-bottom))",
+			}}
+		>
+			<ul className="flex items-center justify-end gap-4">
 				<li>
 					<Link
 						className={cn(

@@ -105,7 +105,7 @@ export default function WebPushPage() {
 	const busy = status === "checking" || status === "working" || !clientId;
 
 	return (
-		<div className="flex flex-1 flex-col gap-8">
+		<div className="flex min-w-0 flex-1 flex-col gap-8">
 			<div>
 				<Link
 					className="text-sm underline decoration-wavy underline-offset-4"
@@ -122,7 +122,7 @@ export default function WebPushPage() {
 				</p>
 			</div>
 
-			<section className="max-w-2xl rounded-2xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
+			<section className="w-full min-w-0 max-w-2xl rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6 md:p-8">
 				<div className="flex flex-col gap-6">
 					<Toggle
 						label="Enable notifications"
