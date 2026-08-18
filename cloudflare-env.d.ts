@@ -11246,6 +11246,7 @@ declare module "cloudflare:email" {
 			raw: ReadableStream | string,
 		): EmailMessage;
 	};
+
 	export type { _EmailMessage as EmailMessage };
 }
 /**
@@ -12205,6 +12206,7 @@ declare module "cloudflare:sockets" {
 		address: string | SocketAddress,
 		options?: SocketOptions,
 	): Socket;
+
 	export type { _connect as connect };
 }
 type MarkdownDocument = {
