@@ -1,6 +1,6 @@
 {
-	"name": "wujinjing.com",
-	"version": "0.1.0",
+	"name": "portfolio",
+	"version": "0.1.2",
 	"private": true,
 	"scripts": {
 		"build": "next build",
